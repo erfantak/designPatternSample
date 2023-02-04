@@ -2,7 +2,8 @@
     "name": "erfan/design-pattern-sample",
     "autoload": {
         "psr-4": {
-            "Strategy\\": "Strategy"
+            "Strategy\\": "Strategy",
+            "Observer\\": "Observer"
         }
     },
     "require": {}
