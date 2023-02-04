@@ -1,0 +1,9 @@
+{
+    "name": "erfan/design-pattern-sample",
+    "autoload": {
+        "psr-4": {
+            "Strategy\\": "Strategy"
+        }
+    },
+    "require": {}
+}
