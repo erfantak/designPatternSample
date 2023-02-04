@@ -1,5 +1,8 @@
 <?php
 
+use Decorator\Invoice;
+use Decorator\Items\Apartment;
+use Decorator\Items\Car;
 use Observer\Publisher;
 use Observer\Service\MailService;
 use Observer\Service\PushNotificationService;
@@ -32,3 +35,9 @@ $publisher->detach($smsService);
 $publisher->detach($PushNotificationService);
 
 $publisher->setEvent('Run another event...');
+
+//Decorator
+$invoice = new Invoice();
+$invoice = new Car($invoice);
+$invoice = new Apartment($invoice);
+var_dump($invoice->totalPrice(), '<br>', $invoice->items());
