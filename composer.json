@@ -4,7 +4,8 @@
         "psr-4": {
             "Strategy\\": "Strategy",
             "Observer\\": "Observer",
-            "Decorator\\": "Decorator"
+            "Decorator\\": "Decorator",
+            "FactoryMethod\\": "FactoryMethod"
         }
     },
     "require": {}
