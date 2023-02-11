@@ -9,6 +9,7 @@ use Observer\Publisher;
 use Observer\Service\MailService;
 use Observer\Service\PushNotificationService;
 use Observer\Service\SMSService;
+use singleton\DatabaseConnection;
 use Strategy\Gateway\Mellat;
 use Strategy\Payment;
 
@@ -73,3 +74,14 @@ echo '<br>';
 $eraser = $factory->createEraser();
 echo $eraser->getMaterial(); // Plastic
 echo '<br>';
+
+
+// Singleton
+echo '<br>';
+echo 'Singleton Pattern';
+echo '<br>';
+$DBConnection1 = DatabaseConnection::getInstance();
+$DBConnection2 = DatabaseConnection::getInstance();
+
+var_dump($DBConnection1, $DBConnection2);
+
