@@ -8,6 +8,7 @@ use Command\Messenger\SMS;
 use Decorator\Invoice;
 use Decorator\Items\Apartment;
 use Decorator\Items\Car;
+use Facade\AuthenticationFacadeService;
 use FactoryMethod\Stationery\Factory\GraphiteStationeryFactory;
 use FactoryMethod\Stationery\Factory\WoodStationeryFactory;
 use Observer\Publisher;
@@ -118,3 +119,11 @@ $dataService = new DataService();
 $dataAdapter = new DataAdapter($dataService);
 $dataAdapter->setData($data);
 $dataService->showData();
+
+
+//Adapter
+echo '<br>';
+echo 'Adapter Pattern';
+echo '<br>';
+$Authentication = new AuthenticationFacadeService();
+$Authentication->createAccount('User Data');
