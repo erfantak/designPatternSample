@@ -1,5 +1,8 @@
 <?php
 
+use Command\Message;
+use Command\Messenger\Email;
+use Command\Messenger\SMS;
 use Decorator\Invoice;
 use Decorator\Items\Apartment;
 use Decorator\Items\Car;
@@ -85,3 +88,15 @@ $DBConnection2 = DatabaseConnection::getInstance();
 
 var_dump($DBConnection1, $DBConnection2);
 
+
+
+//Command
+echo '<br>';
+echo 'Command Pattern';
+echo '<br>';
+
+$message = new Message();
+$message->addMessage( new SMS() );
+$message->addMessage( new Email() );
+
+$message->executeMessage();
