@@ -9,7 +9,8 @@
             "singleton\\": "singleton",
             "Command\\": "Command",
             "Adapter\\": "Adapter",
-            "Facade\\": "Facade"
+            "Facade\\": "Facade",
+            "Proxy\\": "Proxy"
         }
     },
     "require": {}
