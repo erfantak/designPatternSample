@@ -5,7 +5,10 @@
             "Strategy\\": "Strategy",
             "Observer\\": "Observer",
             "Decorator\\": "Decorator",
-            "FactoryMethod\\": "FactoryMethod"
+            "FactoryMethod\\": "FactoryMethod",
+            "singleton\\": "singleton",
+            "Command\\": "Command",
+            "Adapter\\": "Adapter"
         }
     },
     "require": {}

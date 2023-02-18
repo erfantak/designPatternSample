@@ -1,5 +1,7 @@
 <?php
 
+use Adapter\DataAdapter;
+use Adapter\DataService;
 use Command\Message;
 use Command\Messenger\Email;
 use Command\Messenger\SMS;
@@ -100,3 +102,19 @@ $message->addMessage( new SMS() );
 $message->addMessage( new Email() );
 
 $message->executeMessage();
+
+
+//Adapter
+echo '<br>';
+echo 'Adapter Pattern';
+echo '<br>';
+
+$data = [
+    'name'  => 'erfan',
+    'phone' => '0123456789',
+    'email' => 'erfantakdev@gmail.com'
+];
+$dataService = new DataService();
+$dataAdapter = new DataAdapter($dataService);
+$dataAdapter->setData($data);
+$dataService->showData();
